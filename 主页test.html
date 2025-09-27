@@ -2,7 +2,7 @@
 title: 主页
 description: 
 published: true
-date: 2025-09-27T10:51:57.201Z
+date: 2025-09-27T10:54:00.601Z
 tags: 
 editor: code
 dateCreated: 2025-09-27T10:49:15.374Z
@@ -19,60 +19,64 @@ dateCreated: 2025-09-27T10:49:15.374Z
       font-family: 'Segoe UI', 'Noto Sans', sans-serif;
       background: #f9fafb;
       margin: 0;
-      padding: 2rem;
+      padding: 3rem 2rem;
       color: #1f2937;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
       color: #111827;
     }
 
     .link-card-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1280px;
       margin: 0 auto;
+      padding: 0 1rem;
     }
 
     .link-card {
       background: #ffffff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 16px;
+      padding: 32px 24px;
+      min-height: 200px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .link-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.1);
     }
 
     .link-card a {
       text-decoration: none;
       color: #1f2937;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .card-desc {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #4b5563;
       text-align: center;
-      line-height: 1.4;
+      line-height: 1.6;
+      max-width: 90%;
     }
 
     footer {
       text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
+      margin-top: 4rem;
+      font-size: 0.95rem;
       color: #6b7280;
     }
   </style>
@@ -83,23 +87,23 @@ dateCreated: 2025-09-27T10:49:15.374Z
   <div class="link-card-container">
     <div class="link-card">
       <a href="zh/docker">🐳 Docker Dive</a>
-      <div class="card-desc">容器化部署与镜像管理的核心工具，适用于现代微服务架构。</div>
+      <div class="card-desc">深入容器技术，掌握镜像构建、服务编排与自动化部署的核心方法。</div>
     </div>
     <div class="link-card">
       <a href="zh/OpenWRT">📡 OpenWRT Waves</a>
-      <div class="card-desc">开源路由系统，支持高级网络配置与插件扩展，适合家庭与企业场景。</div>
+      <div class="card-desc">探索开源路由系统，实现高级网络配置与家庭设备智能化管理。</div>
     </div>
     <div class="link-card">
       <a href="zh/linux">🐧 Linux Lab</a>
-      <div class="card-desc">稳定、高效的操作系统平台，适用于服务器、开发与嵌入式设备。</div>
+      <div class="card-desc">系统级操作与脚本自动化，适用于服务器运维与嵌入式开发场景。</div>
     </div>
     <div class="link-card">
       <a href="/path/to/macos">🍎 macOS Magic</a>
-      <div class="card-desc">苹果生态下的开发与系统管理技巧，兼顾美学与效率。</div>
+      <div class="card-desc">掌握 macOS 的开发环境配置、系统优化与终端技巧，提升效率与美感。</div>
     </div>
     <div class="link-card">
       <a href="zh/windows">🪟 Windows Wonderland</a>
-      <div class="card-desc">主流桌面系统的应用优化与自动化脚本集，提升日常工作效率。</div>
+      <div class="card-desc">从桌面自动化到系统管理，全面提升 Windows 使用体验与生产力。</div>
     </div>
   </div>
 
