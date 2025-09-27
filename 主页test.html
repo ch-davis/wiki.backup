@@ -2,7 +2,7 @@
 title: 主页
 description: 
 published: true
-date: 2025-09-27T10:49:15.374Z
+date: 2025-09-27T10:50:13.802Z
 tags: 
 editor: code
 dateCreated: 2025-09-27T10:49:15.374Z
@@ -39,10 +39,10 @@ dateCreated: 2025-09-27T10:49:15.374Z
     .link-card {
       background: linear-gradient(135deg, #fef3c7, #fde68a);
       border-radius: 16px;
-      padding: 20px 30px;
-      width: 200px;
+      padding: 20px;
+      width: 220px;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -57,6 +57,15 @@ dateCreated: 2025-09-27T10:49:15.374Z
     .link-card a {
       text-decoration: none;
       color: #1f2937;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #374151;
     }
 
     footer {
@@ -71,11 +80,26 @@ dateCreated: 2025-09-27T10:49:15.374Z
   <h1>🎉 欢迎来到知享的技术游乐场！</h1>
 
   <div class="link-card-container">
-    <div class="link-card"><a href="zh/docker">🐳 Docker Dive</a></div>
-    <div class="link-card"><a href="zh/OpenWRT">📡 OpenWRT Waves</a></div>
-    <div class="link-card"><a href="zh/linux">🐧 Linux Lab</a></div>
-    <div class="link-card"><a href="/path/to/macos">🍎 macOS Magic</a></div>
-    <div class="link-card"><a href="zh/windows">🪟 Windows Wonderland</a></div>
+    <div class="link-card">
+      <a href="zh/docker">🐳 Docker Dive</a>
+      <div class="card-desc">轻松管理容器，像玩积木一样。</div>
+    </div>
+    <div class="link-card">
+      <a href="zh/OpenWRT">📡 OpenWRT Waves</a>
+      <div class="card-desc">让你的路由器变身超级英雄。</div>
+    </div>
+    <div class="link-card">
+      <a href="zh/linux">🐧 Linux Lab</a>
+      <div class="card-desc">探索自由系统的无限可能。</div>
+    </div>
+    <div class="link-card">
+      <a href="/path/to/macos">🍎 macOS Magic</a>
+      <div class="card-desc">苹果系统的奇妙操作手册。</div>
+    </div>
+    <div class="link-card">
+      <a href="zh/windows">🪟 Windows Wonderland</a>
+      <div class="card-desc">熟悉又惊喜的桌面世界探险。</div>
+    </div>
   </div>
 
   <footer>© 2025 知享 Wiki · 技术也可以很有趣 ✨</footer>
