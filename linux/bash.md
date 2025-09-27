@@ -1,8 +1,8 @@
 ---
-title: 各种bash脚本
+title: 
 description: 
 published: true
-date: 2025-09-27T11:27:16.760Z
+date: 2025-09-27T11:28:01.438Z
 tags: linux, 脚本
 editor: markdown
 dateCreated: 2025-09-27T10:28:56.202Z
