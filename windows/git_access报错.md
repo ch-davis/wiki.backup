@@ -2,83 +2,117 @@
 title: git 使用fatal: unable to access报错
 description: 
 published: true
-date: 2025-09-28T01:07:24.394Z
+date: 2025-09-28T01:09:03.614Z
 tags: 教程, git
 editor: markdown
 dateCreated: 2025-07-18T05:32:36.167Z
 ---
 
-<font style="color:rgb(214, 51, 132);">fatal: unable to access ' ': Failed to connect to github.com port 443</font>
-  真的是最烦的东西，从开始从事编程就开始看见
+我已经看过你当前页面了，davis——这是你在 Wiki.js 上的文章《git 使用 fatal: unable to access 报错》，内容非常实用，语气亲切，讲解也很接地气。不过页面布局上确实可以进一步美化，让它更清晰、更专业，同时保留你原本的风格。
 
-<font style="color:rgb(33, 37, 41);">这个恼人的</font> <font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(214, 51, 132);">port 443</font><font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">错误，说白了就是你的电脑跟 GitHub 服务器网络没连上。具体啥原因先放一边，咱们直接上干货，给你两个亲测有效、能让你少走弯路的办法！</font>
-
----
-
-### **<font style="color:rgb(33, 37, 41);">最强解决方案：直接上GitHub Desktop，搞定99%的问题！</font>**
-<font style="color:rgb(33, 37, 41);">如果你不想折腾命令行，或者对网络配置一窍不通，那 GitHub Desktop 绝对是你的首选，</font>**<font style="color:rgb(33, 37, 41);">没有之一！</font>**
-
-+ **<font style="color:rgb(33, 37, 41);">为啥它这么牛？</font>**<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">GitHub Desktop 自己就能更好地处理底层网络连接和各种代理设置，它对复杂的网络环境兼容性极强。很多时候，就算命令行 Git 抽风了，它依然能稳稳当当地帮你拉取和推送代码。</font>
-+ **<font style="color:rgb(33, 37, 41);">咋用？</font>**
-    1. 去[<font style="color:rgb(0, 150, 94);">GitHub Desktop 官网</font>](https://link.segmentfault.com/?enc=8aCQQEOTVILdilTW%2FWeJBg%3D%3D.Y3W%2BQJDfRVOA%2BszxmXnoR3a3Z8bvVjJguOxL0Z6tEuM%3D)下载安装。
-    2. 登录你的 GitHub 账号。
-    3. 直接在界面里点“Clone a repository from the Internet”，粘贴你的仓库地址，选个本地目录，点“Clone”就行了。
-
- 相信我，对大部分朋友来说，这一招就足以让你告别 <font style="color:rgb(214, 51, 132);"> port 443</font>的噩梦！我有的时候懒得操作也是用的这个，真的好用！
+下面是我为你重新整理的完整 Markdown 页面代码，专为 Wiki.js 优化，视觉舒展、结构清晰、语气依旧轻松但更有层次感：
 
 ---
 
-### **<font style="color:rgb(33, 37, 41);">解决方案二：手动配置Git代理（特别是用VPN/代理的朋友，这里是重点！）</font>**
-如果你是命令行死忠粉，或者必须依赖 VPN/代理上网，那么手动配置 Git 代理就是你的必修课了。
+## 🚫 Git 报错：fatal: unable to access
 
-<font style="color:rgb(33, 37, 41);">Git 可以通过全局配置来设置 HTTP/HTTPS 代理：
+> 错误信息：  
+> `fatal: unable to access '...': Failed to connect to github.com port 443`
+
+这个报错真的是最烦的东西。从开始写代码起就时不时遇到它，说白了就是你的电脑跟 GitHub 服务器网络没连上。具体原因先放一边，咱们直接上干货，给你两个亲测有效、能让你少走弯路的办法！
+
+---
+
+## 🥇 最强解决方案：使用 GitHub Desktop（推荐）
+
+如果你不想折腾命令行，或者对网络配置一窍不通，那 GitHub Desktop 绝对是你的首选，没有之一！
+
+### ✅ 为什么推荐它？
+
+- 自带网络处理能力，能自动适配代理环境  
+- 命令行 Git 抽风时，它依然能稳定拉取和推送代码  
+- UI 简洁，操作直观，适合所有用户
+
+### 🛠️ 使用步骤
+
+1. 前往 [GitHub Desktop 官网](https://desktop.github.com/) 下载并安装  
+2. 登录你的 GitHub 账号  
+3. 点击 “Clone a repository from the Internet”  
+4. 粘贴仓库地址 → 选择本地目录 → 点 “Clone”
+
+> 🎯 对大多数人来说，这一招就足以告别 port 443 的噩梦！
+
+---
+
+## 🧑‍💻 解决方案二：手动配置 Git 代理（适合 VPN 用户）
+
+如果你是命令行死忠粉，或者必须依赖 VPN/代理上网，那么手动配置 Git 代理就是你的必修课。
+
+### 🔧 设置代理命令
 
 ```bash
 # 设置 HTTP 代理
 git config --global http.proxy http://127.0.0.1:你的代理端口号
 
 # 设置 HTTPS 代理
-git config --global https://127.0.0.1:你的代理端口号
+git config --global https.proxy https://127.0.0.1:你的代理端口号
 ```
 
- **敲黑板！为什么网上很多教程你跟着做却没用？**
+> ⚠️ 注意：不要盲目使用网上的 7890 或 1080，你的代理端口可能完全不同！  
+{.is-warning}
 
-问题就出在那个 <font style="color:rgb(214, 51, 132);">你的代理端口号</font> 上！网上大部分教程会直接给个<font style="color:rgb(214, 51, 132);">7890</font>或者<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(214, 51, 132);">1080</font><font style="color:rgb(33, 37, 41);">，但你的 VPN 或代理软件用的端口，很可能跟它们不一样！你不能直接抄作业。
+---
 
-**<font style="color:rgb(33, 37, 41);">怎么找到你自己的“专属”代理端口号？</font>**
+### 🔍 如何找到你的真实代理端口号？
 
-<font style="color:rgb(33, 37, 41);">这才是解决问题的核心！通常，你的 VPN 或代理软件都会在设置界面里明明白白地告诉你它正在监听哪个端口。</font>
+#### ✅ 方法一：查看代理软件设置
 
-+ **<font style="color:rgb(33, 37, 41);">去代理工具里找：</font>**<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">打开你正在用的代理软件（比如 Clash、V2RayN、Shadowsocks 等），进到设置页面，找“代理端口”、“HTTP代理端口”或者类似字眼，那个数字就是你的真命天子！</font>
-    - **<font style="color:rgb(33, 37, 41);">举个栗子：</font>** 我自己的代理，它的端口就是<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(214, 51, 132);">17890</font>。所以，我的命令是这样：
+打开你正在用的代理工具（如 Clash、V2RayN、Shadowsocks），进入设置页面，查找：
+
+- “代理端口”
+- “HTTP代理端口”
+- “本地监听端口”
+
+举个例子：
 
 ```bash
 git config --global http.proxy http://127.0.0.1:17890
 git config --global https.proxy https://127.0.0.1:17890
 ```
 
-+ **<font style="color:rgb(33, 37, 41);">从电脑系统设置里看：</font>**
-    - **<font style="color:rgb(33, 37, 41);">Windows：</font>**<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">“设置” -\> “网络和 Internet” -\> “代理”，看看“手动设置代理”那里写的是啥端口。</font>
-    - **<font style="color:rgb(33, 37, 41);">macOS：</font>**<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">“系统设置” -\> “网络” -\> 选中当前连接的网络服务 -\> “详细信息” -\> “代理”选项卡。</font>
+#### ✅ 方法二：查看系统设置
 
-<font style="color:rgb(33, 37, 41);">找到你的私人端口号，替换掉上面的</font><font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(214, 51, 132);">你的代理端口号</font><font style="color:rgb(33, 37, 41);">，再跑一遍命令，基本上问题就迎刃而解了！</font>
+- **Windows：** 设置 → 网络和 Internet → 代理 → 手动设置代理  
+- **macOS：** 系统设置 → 网络 → 当前连接 → 详细信息 → 代理选项卡
 
 ---
 
-### **<font style="color:rgb(33, 37, 41);">小贴士：不用代理时，记得把它“请出去”！</font>**
-<font style="color:rgb(33, 37, 41);">如果你暂时不打算用 VPN 或代理，或者发现它反而导致 Git 出了其他问题，记得用下面这些命令把代理设置清掉：</font>
+### 🧹 清除代理设置（如果不再使用代理）
 
 ```bash
-# 取消 HTTP 代理设置
+# 取消 HTTP 代理
 git config --global --unset http.proxy
 
-# 取消 HTTPS 代理设置
+# 取消 HTTPS 代理
 git config --global --unset https.proxy
 ```
 
+> 建议在不使用代理时及时清除，避免后续连接异常  
+{.is-info}
+
 ---
 
-### **<font style="color:rgb(33, 37, 41);">总结：别让小问题挡住你写代码的大好前程！</font>**
-<font style="color:rgb(33, 37, 41);">“连不上 GitHub”这事儿吧，看似头疼，但只要找对方法，真没那么难。无论是靠 GitHub Desktop 的“傻瓜式”操作，还是精准找到你的代理端口号，希望这些招儿能帮你顺利把代码拉下来，继续你的coding之旅！</font>
+## ✅ 总结
 
-<font style="color:rgb(33, 37, 41);">你之前有没有被这个错误坑过？你是怎么解决的？或者你还知道啥神操作？欢迎在评论区里跟我分享分享呗！</font>
+“连不上 GitHub”这事儿吧，看似头疼，但只要找对方法，真没那么难。无论是靠 GitHub Desktop 的“傻瓜式”操作，还是精准找到你的代理端口号，希望这些招儿能帮你顺利把代码拉下来，继续你的 coding 之旅！
+
+---
+
+你之前有没有被这个错误坑过？你是怎么解决的？或者你还知道啥神操作？欢迎在评论区里分享！
+
+© 2025 知享 Wiki · 技术不止于探索，更在于分享 ✨  
+页面地址：[git_access报错](https://wiki.cloudwind.me/zh/windows/git_access%E6%8A%A5%E9%94%99)
+
+---
+
+如果你想把这个页面加上顶部导航卡片或脚本下载区，我可以继续帮你扩展。但就当前页面而言，这个版本已经是结构清晰、语气自然、视觉舒展的专业级排版了。需要我帮你直接生成 Wiki.js 的页面属性 CSS 吗？
