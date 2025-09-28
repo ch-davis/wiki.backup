@@ -2,7 +2,7 @@
 title: Microsoft Activation Scripts (MAS)
 description: Windows&office 激活
 published: true
-date: 2025-09-28T00:26:55.901Z
+date: 2025-09-28T00:27:58.734Z
 tags: 教程
 editor: markdown
 dateCreated: 2025-08-22T07:13:30.874Z
@@ -114,11 +114,3 @@ https://git.activated.win/massgrave/Microsoft-Activation-Scripts/archive/master.
 
 ---
 
-## ✅ 效果亮点
-
-- 分节清晰，阅读流畅
-- 命令块美观，适合复制粘贴
-- 提示块醒目，增强引导性
-- 表格展示激活方式对比，专业直观
-
-你可以直接将这段 Markdown 内容粘贴到页面编辑器中替换原内容。如果你还想加顶部目录、折叠模块或卡片导航，我可以继续帮你扩展。要不要我再帮你做一个 MAS 工具集导航页？
